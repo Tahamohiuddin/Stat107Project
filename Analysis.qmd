@@ -1,0 +1,50 @@
+---
+title: "Beer and BAC Regression Analysis"
+author: "Shrawani Pradhan & Taha Mohiuddin"
+format: html
+editor: visual
+---
+
+## Introduction
+
+In this project, we analyze the relationship between the number of beers consumed and the resulting Blood Alcohol Content (BAC). Using simple linear regression, we estimate how BAC changes based on beer intake. All computations are done using Base R functions we implemented ourselves.
+
+## Loading Dataset
+
+```{r}
+bac <- read.csv("~/Downloads/bac.csv") # need to paste your filepath here
+bac
+```
+
+You can add options to executable code like this
+
+```{r}
+ref.model <- lm(bac ~ beers + 1, data = bac)
+ref.model
+```
+
+```{r}
+ref.summary <- summary(ref.model)
+ref.summary
+```
+
+## Custom Functions
+
+```{r}
+source("~/Downloads/SimpleRegression.R")
+```
+
+## Run Simple Regression
+
+```{r}
+x <- bac$beers
+y <- bac$bac
+
+our.model <- simple_regression(y, x)
+```
+
+## Summary Output
+
+```{r}
+display_report(our.model)
+```
