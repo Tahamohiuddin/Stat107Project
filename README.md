@@ -1,1 +1,1 @@
-# Stat107Project
+# UCR Stat107
