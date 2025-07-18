@@ -48,3 +48,7 @@ our.model <- simple_regression(y, x)
 ```{r}
 display_report(our.model)
 ```
+## Brief Description of data
+This dataset bac.csv contains information regarding how the number of beers consumed affects someones BAC.
+The rows of data are the participants information
+What we are attempting to discover is the relationship between number of beers someone consumes and their BAC
